@@ -1,1 +1,54 @@
+using System;
 
+class Program
+{
+    static void Main(string[] args)
+    {
+        string? nome, email, dtnascimento, sexo, cep, rua, numero, bairro, cidade, uf, pais;
+
+        Console.WriteLine("Escreva seu nome:");
+        nome = Console.ReadLine();
+
+        Console.WriteLine("Por favor, me informe o seu e-mail:");
+        email = Console.ReadLine();
+
+        Console.WriteLine("Qual a sua data de nascimento (Favor escrever no formato dd/mm/aaaa)?");
+        dtnascimento = Console.ReadLine();
+
+        Console.WriteLine("Qual seu sexo/gênero?");
+        sexo = Console.ReadLine();
+
+        Console.WriteLine("Qual seu CEP?");
+        cep = Console.ReadLine();
+
+        Console.WriteLine("Qual sua rua?");
+        rua = Console.ReadLine();
+
+        Console.WriteLine("Qual o número da tua casa?");
+        numero = Console.ReadLine();
+
+        Console.WriteLine("Qual seu bairro?");
+        bairro = Console.ReadLine();
+
+        Console.WriteLine("Qual sua cidade?");
+        cidade = Console.ReadLine();
+
+        Console.WriteLine("Qual sua UF (Estado)?");
+        uf = Console.ReadLine();
+
+        Console.WriteLine("Qual seu País?");
+        pais = Console.ReadLine();
+
+        string endereco = $"{cep}, {rua}, n° {numero}, {bairro}, {cidade} - {uf}, {pais}.";
+
+        Console.WriteLine(
+            "---------------Ficha Cadastral---------------"
+            + $"\n Nome: {nome}"
+            + $"\n Email: {email}"
+            + $"\n Data de Nascimento: {dtnascimento}"
+            + $"\n Sexo: {sexo}"
+            + $"\n Endereço: {endereco}"
+            + "\n---------------Ficha Cadastral---------------"
+        );
+    }
+}
