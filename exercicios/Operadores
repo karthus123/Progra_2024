@@ -1,0 +1,47 @@
+bool loop = true; 
+while(loop) 
+{
+    Console.WriteLine("Qual operador aritmético deseja selecionar: (+ - * /) ou escreva 'finalizar' para encerrar o programa?");
+    string operador = Console.ReadLine();
+
+    switch(operador)
+    {
+        case "finalizar":
+            loop = false;
+            break;
+        case "+":
+        case "-":
+        case "*":
+        case "/":
+            for (float n2 = 1; n2 <= 9; n2++)
+            {
+                for (float n1 = 1; n1 <= 9; n1++)
+                {
+                    float resultado = 0;
+                    switch (operador)
+                    {
+                        case "+":
+                            resultado = n1 + n2;
+                            break;
+                        case "-":
+                            resultado = n1 - n2;
+                            break;
+                        case "*":
+                            resultado = n1 * n2;
+                            break;
+                        case "/":
+                            // Verifica se n2 não é zero para evitar divisão por zero
+                            if (n2 != 0)
+                                resultado = n1 / n2;
+                            break;
+                    }
+                    Console.WriteLine($"{n1} {operador} {n2} = {resultado}");
+                }
+                Console.WriteLine("______________________________");
+            }
+            break;
+        default:
+            Console.WriteLine("Operação Inválida!!");
+            break;
+    }
+}
